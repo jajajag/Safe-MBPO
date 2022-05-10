@@ -3,6 +3,11 @@ from force.env.mujoco.hopper import HopperEnv
 
 
 class HopperNoBonusEnv(HopperEnv):
+    # Initialize Hopper Env
+    def __init__(self):
+        super().__init__()
+        self._max_episode_steps = 1000
+
     def step(self, action):
         next_state, reward, done, info = super().step(action)
         reward -= 1     # subtract out alive bonus

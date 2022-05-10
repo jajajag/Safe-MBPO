@@ -19,12 +19,19 @@ class CheetahFlipTestEnv(HalfCheetahEnv):
 _flip_test_env = CheetahFlipTestEnv()
 
 class CheetahNoFlipEnv(HalfCheetahEnv):
+    # Initialize Cheetah Env
+    def __init__(self):
+        super().__init__()
+        self._max_episode_steps = 1000
+
     def step(self, action):
         next_state, reward, _, info = super().step(action)
         _flip_test_env.set_state_from_obs(next_state)
-        info['violation'] = _flip_test_env.check_termination() #self.check_termination()
+        info['violation'] = _flip_test_env.check_termination()
+        #self.check_termination()
         return next_state, reward, False, info
 
+    # JAG: Does this function really work?
     def check_done(self, states):
         return np.zeros(len(states), dtype=bool)
 
