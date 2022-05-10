@@ -8,4 +8,4 @@ echo "ROOT_DIR = '$(pwd)/mbpo_data'" >> src/defaults.py
 mkdir force_data
 mkdir ~/.force
 touch ~/.force/machine.json
-echo "{\"default-partition\": 2, \"root-dir\": \"$(pwd)/force_data}\" > ~/.force/machine.json
+echo "{\"default-partition\": 2, \"root-dir\": \"$(pwd)/force_data\"}" > ~/.force/machine.json
