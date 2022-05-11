@@ -8,6 +8,8 @@ Required Python packages and environment variables can be setup simply running:
 
 	sh install.sh
 
+BTW, you may need to install the newest version of PyTorch if the GPU uses sm86 architecture.
+
 Once setup is complete, run the code using the following command:
 
 	python main.py -c config/ENV.json
