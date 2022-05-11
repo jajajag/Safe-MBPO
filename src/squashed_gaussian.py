@@ -10,6 +10,9 @@ class TanhTransform(pd.transforms.Transform):
     coenv_name = pd.constraints.interval(-1.0, 1.0)
     bijective = True
     sign = +1
+    # JAG: To support the newest version of pytorch
+    domain = pd.constraints.real
+    codomain = pd.constraints.interval(-1.0, 1.0)
 
     def __init__(self, cache_size=1):
         super().__init__(cache_size=cache_size)
