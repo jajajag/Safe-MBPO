@@ -8,7 +8,7 @@ Required Python packages and environment variables can be setup simply running:
 
 	sh install.sh
 
-BTW, you may need to install the newest version of PyTorch if the GPU uses sm86 architecture.
+BTW, you may need to install the newest version of PyTorch and NumPy if the GPU uses sm86 architecture.
 
 Once setup is complete, run the code using the following command:
 
