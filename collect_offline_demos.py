@@ -32,6 +32,7 @@ class CollectionSMBPO(SMBPO):
         return {}
 
 
+class Config(BaseConfig):
     env_name = Require(str)
     seed = 1
     train_steps = 10 ** 7
