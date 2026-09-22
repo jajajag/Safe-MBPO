@@ -4,9 +4,9 @@ Code for the NeurIPS 2021 paper "Safe Reinforcement Learning by Imagining the Ne
 Some code is borrowed from [Force](https://github.com/gwthomas/force).
 
 ## Installation
-We are using Python 3.8. The required packages can be installed via
+Required Python packages and environment variables can be setup simply running:
 
-	pip install -r requirements.txt
+	sh install.sh
 
 You also must set the `ROOT_DIR` in `code/defaults.py`.
 This is where experiments' logs and checkpoints will be placed.

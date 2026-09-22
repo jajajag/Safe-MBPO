@@ -1,8 +1,11 @@
-numpy
+--find-links https://download.pytorch.org/whl/torch_stable.html
+
+numpy==1.21.6
 matplotlib
 tqdm
 h5py
 opencv-python
-torch==1.4.0
+torch==1.8.0+cu111
 gym==0.17.2
-mujoco-py==2.0.2.13
+Cython==0.29.36
+mujoco-py==2.0.2.5

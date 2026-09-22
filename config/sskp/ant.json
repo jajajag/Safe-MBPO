@@ -1,0 +1,24 @@
+{
+  "env_name": "ant",
+  "alg_cfg": {
+    "demo_path": "data/ant",
+    "decision_mode": "skill_horizon",
+    "cem_samples": 512,
+    "cem_elites": 64,
+    "cem_iterations": 6,
+    "dual_cem": true,
+    "weak_cem_sample_ratio": 0.25,
+    "weak_cem_elite_ratio": 0.5,
+    "weak_cem_iteration_ratio": 0.33,
+    "risk_cfg": {
+      "online_updates_per_epoch": 2
+    },
+    "skill_cfg": {
+      "decoder_mode": "open_loop",
+      "normalize_actions": true,
+      "horizon": 5,
+      "latent_dim": 16,
+      "kl_weight": 0.001
+    }
+  }
+}
